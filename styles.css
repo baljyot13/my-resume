@@ -1,0 +1,193 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333333;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffd700;
+    font-family: 'Lobster', cursive;
+    animation: logoFadeIn 1s ease-in-out;
+}
+
+@keyframes logoFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    font-size: 18px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+    text-shadow: 0 0 5px #ffd700;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.container {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 15px;
+    animation: containerFadeIn 1.5s ease;
+}
+
+.container h2 {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.container p, .container ul {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container ul li {
+    margin-bottom: 10px;
+}
+
+.skills-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-btn {
+    background-color: #ffd700;
+    color: #333333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skill-btn:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.skill-content {
+    display: none;
+    margin-top: 10px;
+    animation: fadeSlide 0.5s ease-in-out;
+}
+
+.container.strengths {
+    width: 100%;
+    max-width: 500px;
+    min-height: 350px;
+}
+
+.container a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.container a:hover {
+    color: #ffffff;
+}
+
+@keyframes containerFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .left-column {
+        width: 55%;
+    }
+
+    .container.strengths {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-column {
+        width: 100%;
+    }
+
+    .container.strengths {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 28px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav ul li {
+        font-size: 14px;
+    }
+
+    .skill-btn {
+        padding: 6px 12px;
+    }
+
+    .container p, .container ul {
+        font-size: 12px;
+    }
+}

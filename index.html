@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baljyot Singh Khokher - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Baljyot Singh Khokher</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">My Project List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="left-column">
+            <section class="container about-me">
+                <h2>About Me</h2>
+                <p>I am a data science student with a keen interest in problem-solving, data analytics, and coding. I started my journey as a data scientist in 2022 and have since explored and studied data science and its closely related branches. Since 2022, I have worked on multiple data science projects, including Power BI dashboards, chat-bots, predictive analysis, linear regression modeling, OCR, and much more.</p>
+            </section>
+            <section class="container skills">
+                <h2>My Skills</h2>
+                <div class="skills-buttons">
+                    <button class="skill-btn" onclick="toggleSkillContent('data-analysis')">Data Analysis</button>
+                    <button class="skill-btn" onclick="toggleSkillContent('data-science')">Data Scientist</button>
+                    <button class="skill-btn" onclick="toggleSkillContent('web-dev')">Web Development</button>
+                    <button class="skill-btn" onclick="toggleSkillContent('python')">Python</button>
+                </div>
+                <div id="data-analysis" class="skill-content">
+                    <p>Advanced Excel</p>
+                    <p>Microsoft Power BI</p>
+                    <p>Tableau</p>
+                    <p>Exploratory Data Analysis (EDA)</p>
+                    <p>SQL</p>
+                </div>
+                <div id="data-science" class="skill-content">
+                    <p>Linear Regression</p>
+                    <p>Predictive Modeling</p>
+                    <p>Time Series Analysis</p>
+                    <p>R Programming</p>
+                    <p>ETL</p>
+                </div>
+                <div id="web-dev" class="skill-content">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>Java</p>
+                    <p>Node.js</p>
+                    <p>Python</p>
+                    <p>Flask</p>
+                </div>
+                <div id="python" class="skill-content">
+                    <p>TensorFlow</p>
+                    <p>Tesseract</p>
+                    <p>Pandas</p>
+                    <p>NumPy</p>
+                    <p>OpenCV</p>
+                    <p>Matplotlib</p>
+                    <p>scikit-learn</p>
+                </div>
+            </section>
+        </div>
+        <section class="container strengths">
+            <h2>My Strengths and Why You Should Hire Me</h2>
+            <ul>
+                <li>I have worked on multiple projects for college, including data analytics and reporting, application of algorithms such as FCFS, FCLS, priority-based scheduling, and linear regression models.</li>
+                <li>I have extensively researched and learned Python libraries such as TensorFlow, Torch, OpenCV, Pandas, NumPy, and created OCR using MNIST and EMNIST from Keras. I have also worked with Tesseract and Pytesseract.</li>
+                <li>I understand the basics of web development and deployment.</li>
+                <li>I am eager to learn new skills as required for the job.</li>
+                <li>I have a strong background in machine learning and AI, with experience in deploying models to production environments.</li>
+                <li>My passion for continuous learning ensures I stay updated with the latest industry trends and technologies.</li>
+            </ul>
+            <p>Contact me at: <a href="mailto:skbaljyot@gmail.com">skbaljyot@gmail.com</a></p>
+        </section>
+    </main>
+    <script>
+        function toggleSkillContent(skillId) {
+            var content = document.getElementById(skillId);
+            var contents = document.getElementsByClassName('skill-content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].style.display = 'none';
+            }
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+            content.style.animation = 'fadeSlide 0.5s ease-in-out';
+        }
+    </script>
+</body>
+</html>
